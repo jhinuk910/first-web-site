@@ -1,47 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Style sheet</title>
+    <title>First Web side style</title>
     <style>
-        h1{
-            color: gold;
+        *{
+            box-sizing: border-box;
         }
-        .Scacel-efect:hover{
-            color: brown;
-            font-size: 60px;
-            background-color: rgb(0, 255, 136);
+        .row{
+            content: "";
+            clear: both;
+            display:block;
         }
-        input:focus{
-            font-weight: 700px;
-            color: blueviolet;
+        [class*="col-"]{
+            float: left;
+            padding: 15px;
         }
-        li:nth-child(2n){
-            background-color: rgb(0, 255, 242);
-            color: rgb(43, 76, 226);
+        html{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
-        a:visited{
-            color: rgb(42, 71, 165);
+        .header{
+            background-color: #9933cc;
+            color: #ffffff;
+            padding: 15px;
+        }
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .menu li {
+            padding: 8px;
+            margin-bottom: 7px;
+            background-color: #33b5e5;
+            color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        }
+        .menu li:hover{
+            background-color: #0099cc;
+        }
+        .aside {
+            background-color: #33b5e5;
+            padding: 15px;
+            color: #ffffff;
+            text-align: center;
+            font-size: 14px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        }
+        .footer {
+        color: #e61515;
+        text-align: center;
+        font-size: 12px;
+        padding: 15px;
+        }
+        /* For desktop: */
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+
+        @media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        [class*="col-"] {
+          width: 100%;
+        }
         }
     </style>
 </head>
 <body>
-    <h1> CSS Pseudo Class</h1>
-    <h1 class="Scacel-efect">Pseudl Scacel-efect class</h1>
-    <p> This is a very inportent class</p>
-    <p>Psedo class is a help full class in te web developing corch</p>
-    <input name="Gmail" type="text">
-    <input name="pasword" type="text">
-    <ul>
-        <li>Alfazur</li>
-        <li>Jhinuk</li>
-        <li>Sumaya</li>
-        <li>Riya</li>
-        <li>Shila</li>
-        <li>Milu</li>
-        <li>Minhaz</li>
-        <li>Mededi</li>
-    </ul>
-
-    <a href="https://www.microworkers.com/login.php">Login me</a>
+<div class="header">
+    <h1>About Safa (143)</h1>
+</div>
+<div class="row">
+    <div class="col-3 menu">
+        <ul>
+            <li>About</li>
+            <li>Safa</li>
+            <li>Facbook</li>
+            <li>Phone Number</li>
+        </ul>
+    </div>
+</div>
+<div class="col-6">
+    <h1>About Safa</h1>
+    <p> I am beautiful and intelligent lady with a playful, charismatic and cocky personality. I really hope to be introduced to a good man here, with nice manners, honest, reliable. How do I see our first date? I hope we will meet in AJ Alfazur, I enjoy fine dining, candle light is my weakness, so as good bottle of wine. I will be waiting for romantic invitation and will say yes to our first date</p>
+</div>
+<div class="col-3 right">
+    <div class="aside">
+        <h2>About</h2>
+        <p>I am beautiful and intelligent lady with a playful, charismatic and cocky personality.</p>
+        <h2>Birthday</h2>
+        <p>00/00/00</p>
+        <h2>Home</h2>
+        <p>Dhunat</p>
+    </div>
+</div>
+<div class="footer">
+    <p>sefa is a good girls.</p>
+  </div>
 </body>
 </html>
